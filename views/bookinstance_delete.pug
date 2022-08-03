@@ -1,0 +1,9 @@
+extends layout 
+block content 
+    h1 #{title}
+    a(href=bookinstance.book.url) #{bookinstance.book.title}
+    p #{bookinstance.imprint}
+    p Status #{bookinstance.status}
+    p Due #{bookinstance.due_back_formatted}
+    form(method='POST' action='')
+        button.btn.btn-primary(type='submit') Delete
